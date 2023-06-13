@@ -1,11 +1,11 @@
 import { FC } from 'react';
-import Check from '../../../components/commonComponents/Check/Check.tsx';
-import { TaskListProps } from '../../../types/data.types.ts';
+import Check from '../../commonComponents/Check/Check.tsx';
+import { TaskListProps } from '../../../interfaces/data.interfaces.ts';
 import { taskListSlice } from '../../../store/reducers/taskListSlice.ts';
 import { useAppDispatch } from '../../../hooks/redux.ts';
 import { BsTrash } from 'react-icons/bs';
 
-const TaskListItem: FC<TaskListProps> = ({ task }) => {
+const ListItem: FC<TaskListProps> = ({ task }) => {
   const { changeTask, removeTask } = taskListSlice.actions;
   const dispatch = useAppDispatch();
 
@@ -34,4 +34,4 @@ const TaskListItem: FC<TaskListProps> = ({ task }) => {
   );
 };
 
-export default TaskListItem;
+export default ListItem;

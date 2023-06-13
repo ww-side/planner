@@ -5,8 +5,8 @@ import randomColor from 'randomcolor';
 import { boardSlice } from '../../../store/reducers/boardSlice.ts';
 import { RootState } from '../../../store/store.ts';
 import { useAppDispatch, useAppSelector } from '../../../hooks/redux.ts';
-import { ICard } from '../../../types/data.types.ts';
-import Button from '../../../components/commonComponents/Button/Button.tsx';
+import { ICard } from '../../../interfaces/data.interfaces.ts';
+import Button from '../../commonComponents/Button/Button.tsx';
 
 const AddCardForm: FC = () => {
   const card = useAppSelector((state: RootState) => state.board.card);

@@ -1,32 +1,7 @@
 import { FC } from 'react';
-import { nanoid } from 'nanoid';
-import { FcBusinessman, FcBusinesswoman } from 'react-icons/fc';
+import { reviews } from '../data.tsx';
 
 const Reviews: FC = () => {
-  const reviews = [
-    {
-      id: nanoid(),
-      phrase: '"This is hands down the best app for timeboxing your day"',
-      icon: <FcBusinesswoman className="my-auto" size={40} />,
-      name: 'Sarah N.',
-      title: 'Student @ Uchicago',
-    },
-    {
-      id: nanoid(),
-      phrase: '"The brain dump feature is insanely useful..."',
-      icon: <FcBusinessman className="my-auto" size={40} />,
-      name: 'Jonathan S.',
-      title: 'Startup founder',
-    },
-    {
-      id: nanoid(),
-      phrase: '"...this app should not be free. It\'s perfectly!"',
-      icon: <FcBusinessman className="my-auto" size={40} />,
-      name: 'Oleg P.',
-      title: 'Student @ CSTU',
-    },
-  ];
-
   return (
     <div className="flex gap-3 justify-center max-md:flex-col max-md:items-center">
       {reviews.map(user => (

@@ -1,13 +1,15 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { nanoid as id } from 'nanoid';
-import { ITaskList } from '../../types/data.types.ts';
+import { ITaskList } from '../../interfaces/data.interfaces.ts';
 
 interface TaskListState {
   tasks: ITaskList[];
+  filterValue: string;
 }
 
 const initialState: TaskListState = {
   tasks: [],
+  filterValue: '',
 };
 
 export const taskListSlice = createSlice({
@@ -33,6 +35,9 @@ export const taskListSlice = createSlice({
         isCompleted: false,
       };
       state.tasks.unshift(newTask);
+    },
+    setFilterValue(state, action: PayloadAction<string>) {
+      state.filterValue = action.payload;
     },
   },
 });

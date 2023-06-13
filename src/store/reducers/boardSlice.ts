@@ -1,5 +1,5 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-import { IBoardState, ICard } from '../../types/data.types.ts';
+import { IBoardState, ICard } from '../../interfaces/data.interfaces.ts';
 
 const initialState: IBoardState = {
   card: '',

@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import { IButtonProps } from '../../types/data.types.ts';
+import { IButtonProps } from '../../../interfaces/data.interfaces.ts';
 
 const Button: FC<IButtonProps> = ({ onClick, children }) => {
   return (

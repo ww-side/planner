@@ -1,9 +1,9 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import Home from './components/pages/Home/Home.tsx';
-import TaskList from './components/pages/TaskList/TaskList.tsx';
-import ErrorPage from './components/pages/ErrorPage/ErrorPage.tsx';
-import Board from './components/pages/Board/Board.tsx';
-import Screen from './components/Screen/Screen.tsx';
+import Home from './pages/Home/Home.tsx';
+import TaskList from './pages/TaskList/TaskList.tsx';
+import ErrorPage from './pages/ErrorPage/ErrorPage.tsx';
+import Board from './pages/Board/Board.tsx';
+import Screen from './components/commonComponents/Screen/Screen.tsx';
 
 const router = createBrowserRouter([
   {

@@ -1,7 +1,7 @@
 import { FC } from 'react';
 import Menu from './Menu/Menu.tsx';
-import { useAppDispatch, useAppSelector } from '../../hooks/redux.ts';
-import { headerSlice } from '../../store/reducers/headerSlice.ts';
+import { useAppDispatch, useAppSelector } from '../../../hooks/redux.ts';
+import { headerSlice } from '../../../store/reducers/headerSlice.ts';
 import { AiOutlineClose } from 'react-icons/ai';
 import { FiMenu } from 'react-icons/fi';
 
@@ -11,7 +11,7 @@ const Header: FC = () => {
   const dispatch = useAppDispatch();
 
   return (
-    <div className="bg-zinc-800 shadow-md">
+    <>
       <nav
         className="cursor-pointer w-min p-2"
         onClick={() => dispatch(setMenuActive(!menuActive))}
@@ -23,7 +23,7 @@ const Header: FC = () => {
         )}
       </nav>
       <Menu />
-    </div>
+    </>
   );
 };
 

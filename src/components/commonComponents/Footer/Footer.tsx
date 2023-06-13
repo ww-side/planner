@@ -26,9 +26,9 @@ const Footer: FC = () => {
   ];
 
   return (
-    <div className="bg-zinc-800 shadow-md flex items-center justify-between">
+    <div className="bg-zinc-800 shadow-md flex items-center justify-between p-2">
       <h2 className="text-4xl text-white">Task Flow</h2>
-      <div className="flex items-center gap-4 p-3">
+      <div className="flex items-center gap-4">
         {footerLinks.map(item => (
           <a
             key={item.id}

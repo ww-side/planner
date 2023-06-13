@@ -1,7 +1,7 @@
 import { ReactNode } from 'react';
 
-const Layout = ({ children }: { children: ReactNode }) => {
+const MainLayout = ({ children }: { children: ReactNode }) => {
   return <div className="bg-zinc-900 text-white">{children}</div>;
 };
 
-export default Layout;
+export default MainLayout;

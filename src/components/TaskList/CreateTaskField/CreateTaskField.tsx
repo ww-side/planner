@@ -3,7 +3,7 @@ import { taskListSlice } from '../../../store/reducers/taskListSlice.ts';
 import { useAppDispatch } from '../../../hooks/redux.ts';
 import { BsPlusCircleFill } from 'react-icons/bs';
 
-const CreateTodoField: FC = () => {
+const CreateTaskField: FC = () => {
   const [title, setTitle] = useState('');
   const { addTask } = taskListSlice.actions;
   const dispatch = useAppDispatch();
@@ -40,4 +40,4 @@ const CreateTodoField: FC = () => {
   );
 };
 
-export default CreateTodoField;
+export default CreateTaskField;
