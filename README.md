@@ -1,7 +1,7 @@
 # Planner
 
-An app that allows you to organize your daily tasks. This is non-commercial project which I develop.
-
+An app that allows you to organize your daily tasks. This is non-commercial project which I develop.  
+Link - https://planner-ww-side.netlify.app/
 ### Home page
 ![Pic](https://images2.imgbox.com/e2/3e/uhT3lnAF_o.png)
 
