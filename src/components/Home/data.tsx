@@ -1,7 +1,7 @@
 import { nanoid as id, nanoid } from 'nanoid';
 import { FcBusinessman, FcBusinesswoman } from 'react-icons/fc';
 import boardImg from '../../assets/img/board.png';
-import listImg from '../../assets/img/board.png';
+import listImg from '../../assets/img/list.png';
 
 export const about = [
   {
