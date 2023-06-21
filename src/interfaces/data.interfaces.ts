@@ -6,14 +6,6 @@ export interface ITaskList {
   isCompleted: boolean;
 }
 
-export interface TaskListProps {
-  task: {
-    id: string;
-    title: string;
-    isCompleted: boolean;
-  };
-}
-
 export interface ICard {
   id: string;
   item: string;
@@ -24,12 +16,32 @@ export interface ICard {
   };
 }
 
-export interface IBoardState {
-  card: string;
-  cards: ICard[];
+export interface TaskListProps {
+  task: {
+    id: string;
+    title: string;
+    isCompleted: boolean;
+  };
 }
 
 export interface IButtonProps {
   onClick?: MouseEventHandler<HTMLButtonElement>;
   children: ReactNode;
+}
+
+export interface ITimerButtonProps {
+  onClickHandler?: () => void;
+  label: string;
+  color: string;
+}
+
+export interface IBoardState {
+  card: string;
+  cards: ICard[];
+}
+
+export interface ITimerState {
+  time: number;
+  running: boolean;
+  intervalActive: boolean;
 }
