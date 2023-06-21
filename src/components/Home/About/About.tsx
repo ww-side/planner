@@ -18,11 +18,13 @@ const About: FC = () => {
       {about.map(item => (
         <div
           key={item.id}
-          className="flex w-5/12 mb-5 flex-col max-md:w-9/12 max-sm:w-11/12"
+          className="flex w-5/12 mb-5 flex-col justify-center items-center max-md:w-10/12 max-sm:w-11/12"
         >
           <h3 className="font-semibold text-3xl">{item.title}</h3>
           <p className="text-lg">{item.desc}</p>
-          <span className="flex justify-center mt-5">{item.img}</span>
+          <span className="mt-5 w-7/12 max-lg:w-9/12 max-md:w-6/12 max-sm:w-8/12">
+            {item.img}
+          </span>
         </div>
       ))}
     </>
