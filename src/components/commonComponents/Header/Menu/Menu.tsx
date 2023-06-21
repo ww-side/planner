@@ -6,6 +6,8 @@ import { headerSlice } from '../../../../store/reducers/headerSlice.ts';
 import { AiOutlineHome } from 'react-icons/ai';
 import { RiCalendarTodoFill } from 'react-icons/ri';
 import { BsClipboardCheck } from 'react-icons/bs';
+import { AiOutlineClose } from 'react-icons/ai';
+import { IoIosTimer } from 'react-icons/io';
 
 const Menu: FC = () => {
   const menuActive = useAppSelector(state => state.header);
@@ -26,6 +28,12 @@ const Menu: FC = () => {
       href: '/board',
       icon: <RiCalendarTodoFill />,
     },
+    {
+      id: nanoid(),
+      value: 'Timer',
+      href: '/timer',
+      icon: <IoIosTimer />,
+    },
   ];
 
   useEffect(() => {
@@ -37,7 +45,7 @@ const Menu: FC = () => {
 
   return (
     <div
-      className={`fixed h-screen w-screen z-50 transform transition duration-500 shadow-md ${
+      className={`fixed h-[100rem] w-screen z-50 transform transition duration-500 shadow-md translate-y-[-4%] ${
         menuActive ? 'translate-x-[0%]' : 'translate-x-[-100%]'
       }`}
       onClick={() => dispatch(setMenuActive(false))}
@@ -46,7 +54,13 @@ const Menu: FC = () => {
         className="w-1/3 h-full bg-zinc-800 text-white flex flex-col text-center max-md:w-full"
         onClick={e => e.stopPropagation()}
       >
-        <div className="p-7 text-6xl w-full">Task Flow</div>
+        <span
+          className="cursor-pointer absolute left-2 top-3 hover:opacity-50"
+          onClick={() => dispatch(setMenuActive(!menuActive))}
+        >
+          <AiOutlineClose size={55} />
+        </span>
+        <div className="p-7 text-6xl w-full mt-10">Task Flow</div>
         <ul
           className="flex flex-col mx-auto gap-5 text-3xl w-max"
           onClick={() => dispatch(setMenuActive(false))}
@@ -54,8 +68,10 @@ const Menu: FC = () => {
           {menuItems.map(item => (
             <li className="flex items-center gap-2" key={item.id}>
               <Link className="flex items-center gap-2" to={item.href}>
-                {item.icon}
-                {item.value}
+                <span className="flex items-center gap-2 hover:opacity-50">
+                  {item.icon}
+                  {item.value}
+                </span>
               </Link>
             </li>
           ))}

@@ -2,7 +2,6 @@ import { FC } from 'react';
 import Menu from './Menu/Menu.tsx';
 import { useAppDispatch, useAppSelector } from '../../../hooks/redux.ts';
 import { headerSlice } from '../../../store/reducers/headerSlice.ts';
-import { AiOutlineClose } from 'react-icons/ai';
 import { FiMenu } from 'react-icons/fi';
 
 const Header: FC = () => {
@@ -13,14 +12,10 @@ const Header: FC = () => {
   return (
     <>
       <nav
-        className="cursor-pointer w-min p-2"
+        className="cursor-pointer w-min p-2 hover:opacity-50"
         onClick={() => dispatch(setMenuActive(!menuActive))}
       >
-        {menuActive ? (
-          <AiOutlineClose size={50} color="white" />
-        ) : (
-          <FiMenu size={50} color="white" />
-        )}
+        <FiMenu size={50} color="white" />
       </nav>
       <Menu />
     </>
