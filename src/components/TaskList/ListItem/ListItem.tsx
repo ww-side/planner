@@ -4,10 +4,26 @@ import { TaskListProps } from '../../../interfaces/data.interfaces.ts';
 import { taskListSlice } from '../../../store/reducers/taskListSlice.ts';
 import { useAppDispatch } from '../../../hooks/redux.ts';
 import { BsTrash } from 'react-icons/bs';
+import IconBtn from '../../commonComponents/IconBtn/IconBtn.tsx';
 
 const ListItem: FC<TaskListProps> = ({ task }) => {
   const { changeTask, removeTask } = taskListSlice.actions;
   const dispatch = useAppDispatch();
+
+  const handleRemoveTask = () => {
+    dispatch(removeTask(task.id));
+  };
+
+  const handleChangeTask = () => {
+    dispatch(changeTask(task.id));
+  };
+
+  const deleteIcon = (
+    <BsTrash
+      size={22}
+      className="text-gray-600 hover:text-red-700 transition-colors ease-in-out duration-300 cursor-pointer"
+    />
+  );
 
   return (
     <div
@@ -16,20 +32,10 @@ const ListItem: FC<TaskListProps> = ({ task }) => {
       }`}
     >
       <div className="flex items-center">
-        <span
-          className="cursor-pointer"
-          onClick={() => dispatch(changeTask(task.id))}
-        >
-          <Check isCompleted={task.isCompleted} />
-        </span>
+        <Check isCompleted={task.isCompleted} onClick={handleChangeTask} />
         <span className="ml-3">{task.title}</span>
       </div>
-      <button onClick={() => dispatch(removeTask(task.id))}>
-        <BsTrash
-          size={22}
-          className="text-gray-600 hover:text-red-700 transition-colors ease-in-out duration-300 cursor-pointer"
-        />
-      </button>
+      <IconBtn icon={deleteIcon} onClick={handleRemoveTask} />
     </div>
   );
 };
