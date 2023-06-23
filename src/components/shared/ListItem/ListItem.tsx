@@ -38,9 +38,11 @@ const ListItem: FC<ITaskListProps> = ({ task }) => {
         task.isCompleted ? 'opacity-70' : 'bg-zinc-800'
       }`}
     >
-      <div className="flex items-center">
-        <Check isCompleted={task.isCompleted} onClick={handleChangeTask} />
-        <span className="ml-3">{task.title}</span>
+      <div className="flex items-center break-all">
+        <span>
+          <Check isCompleted={task.isCompleted} onClick={handleChangeTask} />
+        </span>
+        <span className="mx-3">{task.title}</span>
       </div>
       <IconBtn icon={deleteIcon} onClick={handleRemoveTask} />
     </div>
