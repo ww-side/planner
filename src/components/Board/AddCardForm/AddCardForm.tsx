@@ -56,7 +56,9 @@ const AddCardForm: FC = () => {
         onChange={handleChange}
         onKeyDown={keyPress}
       />
-      <Button onClick={handleAddCard}>Enter</Button>
+      <Button color="basic" onClickHandler={handleAddCard}>
+        Enter
+      </Button>
     </div>
   );
 };

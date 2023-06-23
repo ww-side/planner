@@ -1,14 +1,44 @@
 import { FC } from 'react';
-import { IButtonProps } from '../../../interfaces/data.interfaces.ts';
+import { ITimerButtonProps } from '../../../interfaces/data.interfaces.ts';
 
-const Button: FC<IButtonProps> = ({ onClick, children }) => {
+enum Colors {
+  basic = 'bg-zinc-100 hover:bg-zinc-200',
+  yellow = 'bg-yellow-400 hover:bg-yellow-500',
+  green = 'bg-green-500 hover:bg-green-600',
+  greenDisabled = Colors.green +
+    'pointer-events-none cursor-not-allowed opacity-50',
+  red = 'bg-red-600 hover:bg-red-700',
+}
+
+const YELLOW_COLOR = 'yellow';
+const GREEN_COLOR = 'green';
+const RED_COLOR = 'red';
+const GREEN_DISABLED = 'greenDisabled';
+
+const Button: FC<ITimerButtonProps> = ({ onClickHandler, children, color }) => {
+  const getColor = (color: string) => {
+    switch (color) {
+      case YELLOW_COLOR:
+        return Colors.yellow;
+      case GREEN_COLOR:
+        return Colors.green;
+      case RED_COLOR:
+        return Colors.red;
+      case GREEN_DISABLED:
+        return Colors.greenDisabled;
+      default:
+        return Colors.basic;
+    }
+  };
+
   return (
     <button
-      className="bg-white text-black font-bold py-2 px-4 rounded
-          transition-all duration-300 ease-in-out shadow-md hover:bg-gray-300"
-      onClick={onClick}
+      className={`w-1/12 max-lg:w-2/12 max-md:w-3/12 max-sm:w-4/12 font-bold py-2 px-4 rounded ${getColor(
+        color
+      )}`}
+      onClick={onClickHandler}
     >
-      {children}
+      <span className="text-black">{children}</span>
     </button>
   );
 };

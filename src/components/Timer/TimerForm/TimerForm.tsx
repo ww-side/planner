@@ -1,5 +1,5 @@
 import { FC, FormEvent, useRef } from 'react';
-import TimerButton from '../TimerButton/TimerButton.tsx';
+import Button from '../../commonComponents/Button/Button.tsx';
 import { useAppDispatch, useAppSelector } from '../../../hooks/redux.ts';
 import { timerSlice } from '../../../store/reducers/timerSlice.ts';
 import TimerInput from '../TimerInput/TimerInput.tsx';
@@ -44,9 +44,9 @@ const TimerForm: FC = () => {
       <TimerInput inputRef={minutesRef} placeholder="Enter minutes" />
       <TimerInput inputRef={secondsRef} placeholder="Enter seconds" />
       {time > 0 ? (
-        <TimerButton label="Start" color="greenDisabled" />
+        <Button color="greenDisabled">Start</Button>
       ) : (
-        <TimerButton label="Start" color="green" />
+        <Button color="green">Start</Button>
       )}
     </form>
   );

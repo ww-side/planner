@@ -3,7 +3,7 @@ import { useAppDispatch, useAppSelector } from '../../hooks/redux.ts';
 import { timerSlice } from '../../store/reducers/timerSlice.ts';
 import Clock from '../../components/Timer/Clock/Clock.tsx';
 import TimerForm from '../../components/Timer/TimerForm/TimerForm.tsx';
-import TimerButton from '../../components/Timer/TimerButton/TimerButton.tsx';
+import Button from '../../components/commonComponents/Button/Button.tsx';
 
 const Timer = () => {
   const time = useAppSelector(state => state.timer.time);
@@ -55,16 +55,15 @@ const Timer = () => {
       <Clock />
       <TimerForm />
       <span className="flex gap-3 justify-center mt-2">
-        <TimerButton
+        <Button
           onClickHandler={handleStopClick}
-          label={running ? 'Stop' : 'Continue'}
           color={running ? 'red' : 'green'}
-        />
-        <TimerButton
-          onClickHandler={handleReset}
-          label="Reset"
-          color="yellow"
-        />
+        >
+          {running ? 'Stop' : 'Continue'}
+        </Button>
+        <Button onClickHandler={handleReset} color="yellow">
+          Reset
+        </Button>
       </span>
     </>
   );
