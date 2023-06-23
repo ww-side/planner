@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import { reviews } from '../data.tsx';
+import { reviews } from '../dataHome.tsx';
 
 const Reviews: FC = () => {
   return (

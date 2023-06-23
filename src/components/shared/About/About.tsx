@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import { about } from '../data.tsx';
+import { about } from '../dataHome.tsx';
 
 const About: FC = () => {
   return (

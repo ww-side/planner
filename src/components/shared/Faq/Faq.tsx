@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import { faq } from '../data.tsx';
+import { faq } from '../dataHome.tsx';
 import './Faq.css';
 
 const Faq: FC = () => {

@@ -1,8 +1,8 @@
 import { useEffect, useRef } from 'react';
 import { useAppDispatch, useAppSelector } from '../../hooks/redux.ts';
 import { timerSlice } from '../../store/reducers/timerSlice.ts';
-import Clock from '../../components/Timer/Clock/Clock.tsx';
-import TimerForm from '../../components/Timer/TimerForm/TimerForm.tsx';
+import Clock from '../../components/shared/Clock/Clock.tsx';
+import TimerForm from '../../components/shared/TimerForm/TimerForm.tsx';
 import Button from '../../components/commonComponents/Button/Button.tsx';
 
 const Timer = () => {

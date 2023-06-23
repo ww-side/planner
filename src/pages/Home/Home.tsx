@@ -1,8 +1,8 @@
 import Footer from '../../components/commonComponents/Footer/Footer.tsx';
-import Reviews from '../../components/Home/Reviews/Reviews.tsx';
-import About from '../../components/Home/About/About.tsx';
-import Faq from '../../components/Home/Faq/Faq.tsx';
-import Title from '../../components/Home/Title/Title.tsx';
+import Reviews from '../../components/shared/Reviews/Reviews.tsx';
+import About from '../../components/shared/About/About.tsx';
+import Faq from '../../components/shared/Faq/Faq.tsx';
+import Title from '../../components/shared/Title/Title.tsx';
 
 const Home = () => {
   return (
