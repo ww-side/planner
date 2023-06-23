@@ -1,5 +1,10 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-import { ITimerState } from '../../interfaces/data.interfaces.ts';
+
+interface ITimerState {
+  time: number;
+  running: boolean;
+  intervalActive: boolean;
+}
 
 const initialState: ITimerState = {
   time: 0,

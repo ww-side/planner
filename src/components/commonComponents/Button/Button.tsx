@@ -1,5 +1,10 @@
-import { FC } from 'react';
-import { ITimerButtonProps } from '../../../interfaces/data.interfaces.ts';
+import { FC, ReactNode } from 'react';
+
+interface IButtonProps {
+  onClickHandler?: () => void;
+  children: ReactNode;
+  color: string;
+}
 
 enum Colors {
   basic = 'bg-zinc-100 hover:bg-zinc-200',
@@ -15,7 +20,7 @@ const GREEN_COLOR = 'green';
 const RED_COLOR = 'red';
 const GREEN_DISABLED = 'greenDisabled';
 
-const Button: FC<ITimerButtonProps> = ({ onClickHandler, children, color }) => {
+const Button: FC<IButtonProps> = ({ onClickHandler, children, color }) => {
   const getColor = (color: string) => {
     switch (color) {
       case YELLOW_COLOR:

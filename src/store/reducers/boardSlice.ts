@@ -1,5 +1,10 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-import { IBoardState, ICard } from '../../interfaces/data.interfaces.ts';
+import { ICard } from '../../interfaces/data.interfaces.ts';
+
+interface IBoardState {
+  card: string;
+  cards: ICard[];
+}
 
 const initialState: IBoardState = {
   card: '',

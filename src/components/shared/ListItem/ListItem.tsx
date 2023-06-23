@@ -1,12 +1,19 @@
 import { FC } from 'react';
 import Check from '../../commonComponents/Check/Check.tsx';
-import { TaskListProps } from '../../../interfaces/data.interfaces.ts';
 import { taskListSlice } from '../../../store/reducers/taskListSlice.ts';
 import { useAppDispatch } from '../../../hooks/redux.ts';
 import { BsTrash } from 'react-icons/bs';
 import IconBtn from '../../commonComponents/IconBtn/IconBtn.tsx';
 
-const ListItem: FC<TaskListProps> = ({ task }) => {
+interface ITaskListProps {
+  task: {
+    id: string;
+    title: string;
+    isCompleted: boolean;
+  };
+}
+
+const ListItem: FC<ITaskListProps> = ({ task }) => {
   const { changeTask, removeTask } = taskListSlice.actions;
   const dispatch = useAppDispatch();
 
