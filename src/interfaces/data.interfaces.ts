@@ -31,7 +31,7 @@ export interface IButtonProps {
 
 export interface ITimerButtonProps {
   onClickHandler?: () => void;
-  label: string;
+  children: ReactNode;
   color: string;
 }
 
