@@ -1,7 +1,8 @@
-import ListItem from '../ListItem/ListItem.tsx';
+import { FC } from 'react';
+import ListItem from '../ListItem/index.tsx';
 import { useAppSelector } from '../../../hooks/redux.ts';
 
-const List = () => {
+const List: FC = () => {
   const { tasks } = useAppSelector(state => state.tasks);
   const { filterValue } = useAppSelector(state => state.tasks);
 

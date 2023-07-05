@@ -1,12 +1,12 @@
 import { FC } from 'react';
 import { BsCheck } from 'react-icons/bs';
 
-interface CheckType {
+interface CheckTypeProps {
   isCompleted: boolean;
   onClick: () => void;
 }
 
-const Check: FC<CheckType> = ({ isCompleted, onClick }) => {
+const Check: FC<CheckTypeProps> = ({ isCompleted, onClick }) => {
   return (
     <div
       className={`border rounded-lg border-white-300 w-6 h-6 cursor-pointer ${

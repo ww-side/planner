@@ -1,7 +1,7 @@
 import { FC } from 'react';
-import CreateTaskField from '../../components/shared/CreateTaskField/CreateTaskField.tsx';
-import List from '../../components/shared/List/List.tsx';
-import FilterTaskField from '../../components/shared/FilterTaskField/FilterTaskField.tsx';
+import CreateTaskField from '../../components/shared/CreateTaskField/index.tsx';
+import List from '../../components/shared/List/index.tsx';
+import FilterTaskField from '../../components/shared/FilterTaskField/index.tsx';
 
 const TaskList: FC = () => {
   return (

@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import Menu from './Menu/Menu.tsx';
+import Menu from '../Menu/Menu.tsx';
 import { useAppDispatch, useAppSelector } from '../../../hooks/redux.ts';
 import { headerSlice } from '../../../store/reducers/headerSlice.ts';
 import { FiMenu } from 'react-icons/fi';

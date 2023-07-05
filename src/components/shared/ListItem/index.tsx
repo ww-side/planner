@@ -1,11 +1,11 @@
 import { FC } from 'react';
-import Check from '../../common/Check/Check.tsx';
+import Check from '../../common/Check/index.tsx';
 import { taskListSlice } from '../../../store/reducers/taskListSlice.ts';
 import { useAppDispatch } from '../../../hooks/redux.ts';
 import { BsTrash } from 'react-icons/bs';
-import IconBtn from '../../common/IconBtn/IconBtn.tsx';
+import IconBtn from '../../common/IconBtn/index.tsx';
 
-interface ITaskListProps {
+interface TaskListProps {
   task: {
     id: string;
     title: string;
@@ -13,7 +13,7 @@ interface ITaskListProps {
   };
 }
 
-const ListItem: FC<ITaskListProps> = ({ task }) => {
+const ListItem: FC<TaskListProps> = ({ task }) => {
   const { changeTask, removeTask } = taskListSlice.actions;
   const dispatch = useAppDispatch();
 

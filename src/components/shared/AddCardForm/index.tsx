@@ -2,7 +2,7 @@ import { ChangeEvent, FC, KeyboardEvent } from 'react';
 import Chance from 'chance';
 import { nanoid } from 'nanoid';
 import randomColor from 'randomcolor';
-import Button from '../../common/Button/Button.tsx';
+import Button from '../../common/Button/index.tsx';
 import { boardSlice } from '../../../store/reducers/boardSlice.ts';
 import { RootState } from '../../../store/store.ts';
 import { useAppDispatch, useAppSelector } from '../../../hooks/redux.ts';

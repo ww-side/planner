@@ -1,11 +1,11 @@
 import React, { FC } from 'react';
 
-interface IIConBtnProps {
+interface IconBtnProps {
   onClick: () => void;
   icon: React.ReactNode;
 }
 
-const IconBtn: FC<IIConBtnProps> = ({ icon, onClick }) => {
+const IconBtn: FC<IconBtnProps> = ({ icon, onClick }) => {
   return <button onClick={onClick}>{icon}</button>;
 };
 

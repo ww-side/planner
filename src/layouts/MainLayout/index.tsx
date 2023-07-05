@@ -1,6 +1,10 @@
-import { ReactNode } from 'react';
+import { FC, ReactNode } from 'react';
 
-const MainLayout = ({ children }: { children: ReactNode }) => {
+interface MainLayoutProps {
+  children: ReactNode;
+}
+
+const MainLayout: FC<MainLayoutProps> = ({ children }) => {
   return <div className="bg-zinc-900 text-white">{children}</div>;
 };
 

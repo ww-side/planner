@@ -1,11 +1,11 @@
-import { useEffect, useRef } from 'react';
+import { FC, useEffect, useRef } from 'react';
+import Clock from '../../components/shared/Clock/index.tsx';
+import TimerForm from '../../components/shared/TimerForm/index.tsx';
+import Button from '../../components/common/Button/index.tsx';
 import { useAppDispatch, useAppSelector } from '../../hooks/redux.ts';
 import { timerSlice } from '../../store/reducers/timerSlice.ts';
-import Clock from '../../components/shared/Clock/Clock.tsx';
-import TimerForm from '../../components/shared/TimerForm/TimerForm.tsx';
-import Button from '../../components/common/Button/Button.tsx';
 
-const Timer = () => {
+const Timer: FC = () => {
   const time = useAppSelector(state => state.timer.time);
   const running = useAppSelector(state => state.timer.running);
   const intervalActive = useAppSelector(state => state.timer.intervalActive);

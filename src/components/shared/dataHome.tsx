@@ -1,11 +1,11 @@
-import { nanoid as id, nanoid } from 'nanoid';
+import { nanoid as id } from 'nanoid';
 import { FcBusinessman, FcBusinesswoman } from 'react-icons/fc';
 import boardImg from '../../assets/img/board.png';
 import listImg from '../../assets/img/list.png';
 
 export const about = [
   {
-    id: nanoid(),
+    id: id(),
     title: 'Board',
     desc: `A task board is a handy tool that helps you organize and keep track of your 
     task or project list. It is an electronic surface on which you can write and move 
@@ -14,7 +14,7 @@ export const about = [
     img: <img src={boardImg} alt="board" />,
   },
   {
-    id: nanoid(),
+    id: id(),
     title: 'Task List',
     desc: `The task list will help you organize your tasks and mark their completion. 
     You can use the list to easily indicate the current status of tasks. For example, 
@@ -62,21 +62,21 @@ export const faq = [
 
 export const reviews = [
   {
-    id: nanoid(),
+    id: id(),
     phrase: '"This is hands down the best app for timeboxing your day"',
     icon: <FcBusinesswoman className="my-auto" size={40} />,
     name: 'Sarah N.',
     title: 'Student @ Uchicago',
   },
   {
-    id: nanoid(),
+    id: id(),
     phrase: '"The brain dump feature is insanely useful..."',
     icon: <FcBusinessman className="my-auto" size={40} />,
     name: 'Jonathan S.',
     title: 'Startup founder',
   },
   {
-    id: nanoid(),
+    id: id(),
     phrase: '"...this app should not be free. It\'s perfectly!"',
     icon: <FcBusinessman className="my-auto" size={40} />,
     name: 'Oleg P.',

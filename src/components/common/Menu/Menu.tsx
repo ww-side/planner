@@ -1,8 +1,8 @@
 import { Link } from 'react-router-dom';
 import { FC, useEffect } from 'react';
 import { nanoid } from 'nanoid';
-import { useAppDispatch, useAppSelector } from '../../../../hooks/redux.ts';
-import { headerSlice } from '../../../../store/reducers/headerSlice.ts';
+import { useAppDispatch, useAppSelector } from '../../../hooks/redux.ts';
+import { headerSlice } from '../../../store/reducers/headerSlice.ts';
 import { AiOutlineHome } from 'react-icons/ai';
 import { RiCalendarTodoFill } from 'react-icons/ri';
 import { BsClipboardCheck } from 'react-icons/bs';

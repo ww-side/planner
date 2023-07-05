@@ -1,5 +1,5 @@
 import { FC, FormEvent, useRef } from 'react';
-import Button from '../../common/Button/Button.tsx';
+import Button from '../../common/Button/index.tsx';
 import TimerInput from '../TimerInput/index.tsx';
 import { useAppDispatch, useAppSelector } from '../../../hooks/redux.ts';
 import { timerSlice } from '../../../store/reducers/timerSlice.ts';

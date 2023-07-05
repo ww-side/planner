@@ -1,6 +1,10 @@
-import { ReactNode } from 'react';
+import { FC, ReactNode } from 'react';
 
-const HeaderLayout = ({ children }: { children: ReactNode }) => {
+interface HeaderLayoutProps {
+  children: ReactNode;
+}
+
+const HeaderLayout: FC<HeaderLayoutProps> = ({ children }) => {
   return <div className="bg-zinc-800 text-white shadow-md">{children}</div>;
 };
 

@@ -1,6 +1,6 @@
 import { FC } from 'react';
 import { Outlet } from 'react-router-dom';
-import Header from '../Header/Header.tsx';
+import Header from '../Header/index.tsx';
 import MainLayout from '../../../layouts/MainLayout/index.tsx';
 import HeaderLayout from '../../../layouts/HeaderLayout/index.tsx';
 

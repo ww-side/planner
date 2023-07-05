@@ -1,9 +1,9 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { nanoid as id } from 'nanoid';
-import { ITaskList } from '../../interfaces/data.interfaces.ts';
+import { TaskList } from '../../interfaces/task-list.ts';
 
 interface TaskListState {
-  tasks: ITaskList[];
+  tasks: TaskList[];
   filterValue: string;
 }
 
@@ -29,7 +29,7 @@ export const taskListSlice = createSlice({
       const isEmptyField = action.payload.trim() === '';
       if (isEmptyField) return;
 
-      const newTask: ITaskList = {
+      const newTask: TaskList = {
         id: id(),
         title: action.payload,
         isCompleted: false,

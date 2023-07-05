@@ -1,8 +1,8 @@
 import React, { FC, useState } from 'react';
+import IconBtn from '../../common/IconBtn/index.tsx';
 import { taskListSlice } from '../../../store/reducers/taskListSlice.ts';
 import { useAppDispatch } from '../../../hooks/redux.ts';
 import { BsPlusCircleFill } from 'react-icons/bs';
-import IconBtn from '../../common/IconBtn/IconBtn.tsx';
 
 const CreateTaskField: FC = () => {
   const [title, setTitle] = useState('');

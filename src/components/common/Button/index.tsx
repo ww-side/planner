@@ -1,6 +1,6 @@
 import { FC, ReactNode } from 'react';
 
-interface IButtonProps {
+interface ButtonProps {
   onClickHandler?: () => void;
   children: ReactNode;
   color: string;
@@ -20,7 +20,7 @@ const GREEN_COLOR = 'green';
 const RED_COLOR = 'red';
 const GREEN_DISABLED = 'greenDisabled';
 
-const Button: FC<IButtonProps> = ({ onClickHandler, children, color }) => {
+const Button: FC<ButtonProps> = ({ onClickHandler, children, color }) => {
   const getColor = (color: string) => {
     switch (color) {
       case YELLOW_COLOR:

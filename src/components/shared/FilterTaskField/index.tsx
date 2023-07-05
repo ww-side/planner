@@ -1,8 +1,8 @@
-import { ChangeEvent } from 'react';
+import { ChangeEvent, FC } from 'react';
 import { useAppDispatch, useAppSelector } from '../../../hooks/redux.ts';
 import { taskListSlice } from '../../../store/reducers/taskListSlice.ts';
 
-const FilterTaskField = () => {
+const FilterTaskField: FC = () => {
   const { setFilterValue } = taskListSlice.actions;
   const { filterValue } = useAppSelector(state => state.tasks);
   const dispatch = useAppDispatch();

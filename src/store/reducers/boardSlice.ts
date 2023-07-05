@@ -1,9 +1,9 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-import { ICard } from '../../interfaces/data.interfaces.ts';
+import { Card } from '../../interfaces/card.ts';
 
 interface IBoardState {
   card: string;
-  cards: ICard[];
+  cards: Card[];
 }
 
 const initialState: IBoardState = {
@@ -18,10 +18,10 @@ export const boardSlice = createSlice({
     setCard: (state, action: PayloadAction<string>) => {
       state.card = action.payload;
     },
-    setCards: (state, action: PayloadAction<ICard[]>) => {
+    setCards: (state, action: PayloadAction<Card[]>) => {
       state.cards = action.payload;
     },
-    addCard: (state, action: PayloadAction<ICard>) => {
+    addCard: (state, action: PayloadAction<Card>) => {
       state.cards.push(action.payload);
     },
     deleteCard: (state, action: PayloadAction<string>) => {

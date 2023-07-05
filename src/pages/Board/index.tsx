@@ -1,6 +1,6 @@
 import { FC } from 'react';
-import Card from '../../components/shared/Card/Card.tsx';
-import AddCardForm from '../../components/shared/AddCardForm/AddCardForm.tsx';
+import Card from '../../components/shared/Card/index.tsx';
+import AddCardForm from '../../components/shared/AddCardForm/index.tsx';
 
 const Board: FC = () => {
   return (
