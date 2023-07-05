@@ -2,11 +2,11 @@ import { ChangeEvent, FC, KeyboardEvent } from 'react';
 import Chance from 'chance';
 import { nanoid } from 'nanoid';
 import randomColor from 'randomcolor';
+import Button from '../../common/Button/Button.tsx';
 import { boardSlice } from '../../../store/reducers/boardSlice.ts';
 import { RootState } from '../../../store/store.ts';
 import { useAppDispatch, useAppSelector } from '../../../hooks/redux.ts';
-import { ICard } from '../../../interfaces/data.interfaces.ts';
-import Button from '../../commonComponents/Button/Button.tsx';
+import { Card } from '../../../interfaces/card.ts';
 
 const AddCardForm: FC = () => {
   const card = useAppSelector((state: RootState) => state.board.card);
@@ -22,7 +22,7 @@ const AddCardForm: FC = () => {
       return;
     }
 
-    const newItem: ICard = {
+    const newItem: Card = {
       id: nanoid(),
       item: card,
       color: randomColor({

@@ -1,9 +1,9 @@
 import { FC } from 'react';
-import Check from '../../commonComponents/Check/Check.tsx';
+import Check from '../../common/Check/Check.tsx';
 import { taskListSlice } from '../../../store/reducers/taskListSlice.ts';
 import { useAppDispatch } from '../../../hooks/redux.ts';
 import { BsTrash } from 'react-icons/bs';
-import IconBtn from '../../commonComponents/IconBtn/IconBtn.tsx';
+import IconBtn from '../../common/IconBtn/IconBtn.tsx';
 
 interface ITaskListProps {
   task: {

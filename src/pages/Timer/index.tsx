@@ -3,7 +3,7 @@ import { useAppDispatch, useAppSelector } from '../../hooks/redux.ts';
 import { timerSlice } from '../../store/reducers/timerSlice.ts';
 import Clock from '../../components/shared/Clock/Clock.tsx';
 import TimerForm from '../../components/shared/TimerForm/TimerForm.tsx';
-import Button from '../../components/commonComponents/Button/Button.tsx';
+import Button from '../../components/common/Button/Button.tsx';
 
 const Timer = () => {
   const time = useAppSelector(state => state.timer.time);

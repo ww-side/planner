@@ -1,8 +1,8 @@
 import { FC, FormEvent, useRef } from 'react';
-import Button from '../../commonComponents/Button/Button.tsx';
+import Button from '../../common/Button/Button.tsx';
+import TimerInput from '../TimerInput/index.tsx';
 import { useAppDispatch, useAppSelector } from '../../../hooks/redux.ts';
 import { timerSlice } from '../../../store/reducers/timerSlice.ts';
-import TimerInput from '../TimerInput/TimerInput.tsx';
 
 const TimerForm: FC = () => {
   const time = useAppSelector(state => state.timer.time);

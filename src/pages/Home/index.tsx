@@ -1,4 +1,4 @@
-import Footer from '../../components/commonComponents/Footer/Footer.tsx';
+import Footer from '../../components/common/Footer/Footer.tsx';
 import Reviews from '../../components/shared/Reviews/Reviews.tsx';
 import About from '../../components/shared/About/About.tsx';
 import Faq from '../../components/shared/Faq/Faq.tsx';
